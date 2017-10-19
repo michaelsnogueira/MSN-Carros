@@ -4,25 +4,47 @@
     <meta charset="utf-8" />
     <title>MSN CARROS</title>
     <style>
-    thead {color:red;}
-    tbody {color:blue;}
+    thead {
+      color:red;
+      margin-top:50%;
+      margin-bottom:50%;
+      text-align: center;
+
+    }
     tfoot {color:red;}
 
     table, tr, th, td {
-        border: 0.5px solid black;
-        width: 500px;
+      border: 0.5px solid black;
+      width: 500px;
+      text-shadow: 5px 5px 5px rbga(0,0,0,3.5);
+      box-shadow: 2px 1px 1px #333;
+      padding: 2px;
+
     }
     input{
       padding: 5px;
       width: 300px;
+      margin-bottom: 01%;
     }
     button{
-      background: orange;
-      color: black
+      background: #a9a9a9;
+      color: black;
+      margin-bottom: 01%;
     }
+    #btn
+    {
+      margin-top:50%;
+      margin-bottom:50%;
+      width: 80px;
+    }
+
     img{
       max-width: 200px;
       height: auto;
+    }
+
+    header{
+      text-align: center;
     }
 
 </style>
@@ -36,23 +58,23 @@
     </header>
     <form action="/" data-js="registra-carro">
         <li>
-          <label>Imagem do Carro: </label>
+          <label><strong>Imagem do Carro:</strong></label>
           <input data-js="inputImagem" type="url" />
         </li>
         <li>
-          <label>Marca / Modelo:</label>
+          <label><strong>Marca / Modelo:</strong></label>
           <input data-js="inputMarca" type="input" />
         </li>
         <li>
-          <label>Ano:</label>
+          <label><strong>Ano:</strong></label>
           <input data-js="inputAno" type="input" />
         </li>
         <li>
-          <label>Placa:</label>
+          <label><strong>Placa:</strong></label>
           <input data-js="inputPlaca" type="input" />
         </li>
         <li>
-          <label>Cor:</label>
+          <label><strong>Cor:</strong></label>
           <input data-js="inputCor" type="input" />
         </li>
         <li>
@@ -62,11 +84,12 @@
     <table data-js="tabela">
       <thead>
         <tr>
-          <td>Imagem do Carro</td>
-          <td>Marca / Modelo</td>
-          <td>Ano</td>
-          <td>Placa</td>
-          <td>Cor</td>
+          <td><strong>Imagem do Carro</strong></td>
+          <td><strong>Marca / Modelo</strong></td>
+          <td><strong>Ano</strong></td>
+          <td><strong>Placa</strong></td>
+          <td><strong>Cor</strong></td>
+          <td><strong>Ação</strong></td>
         </tr>
       </thead>
       <tbody data-js="tbody">

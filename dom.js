@@ -8,7 +8,7 @@
 
   DOM.prototype.on = function on(event, callback){
     Array.prototype.forEach.call(this.element,function(item, index){
-      item.addEventListener(event, callback, false);
+      item.addEventListener(event, callback, true);
     });
   };
 
