@@ -4,10 +4,8 @@ var express = require('express');
 var cors = require('cors');
 var bodyParser = require('body-parser');
 var app = express();
-var port = process.env.PORT || 4009;
+var port = process.env.PORT || 4010;
 var routes = require('./routes');
-
-var cars = [];
 
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));

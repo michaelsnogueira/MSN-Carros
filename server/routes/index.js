@@ -19,8 +19,6 @@ router.post('/', function(req, res) {
     return car.plate === plate;
   });
 
-  console.log('existe o carro: ', hasCars);
-
   if(!hasCars){
     cars.push({
       image: image,
@@ -30,6 +28,13 @@ router.post('/', function(req, res) {
       color: color
     });
   }
+});
+
+router.delete('/', function(req, res) {
+  cars = cars.filter(function(car) {
+    return car.plate !== req.body.plate;
+  });
+  res.json({ message: 'success' });
 });
 
 module.exports = router;
